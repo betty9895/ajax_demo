@@ -10,6 +10,9 @@ btn.addEventListener("click", function () {
         renderHTML(myData);
         // console.log(myData[0]);
     };
+    myRequest.onerror=function(){
+        console.log("connection error");
+    }
     myRequest.send();
     pageCounter++;
     if (pageCounter > 3) {
@@ -17,6 +20,7 @@ btn.addEventListener("click", function () {
         btn.style.display = "none"
     }
 });
+
 
 
 function renderHTML(data) {
